@@ -16,25 +16,12 @@ proceedBtn = document.querySelector('.proceed-button button');
 
 proceedBtn.addEventListener('click',()=>{
     if( blInput.value && firstCompanyName.value && firstCompanyBL.value && secondCompanyName.value && secondCompanyBL.value){
-        companyReceivedDiv.classList.add('active');
-        companyDetailsDiv.classList.add('hidden');
-        totalBlDiv.classList.add('hidden');
-        proceedBtn.style.display = 'none';
+        modals.classList.add('active'); 
         firstCompanyConvertedName.forEach(index=>index.innerText = firstCompanyName.value);
         secondCompanyConvertedName.forEach(index=>index.innerText = secondCompanyName.value);
     }else{
         alert('Fill up all field')
     }
-})
-
-document.getElementById('back-button').addEventListener('click',()=>{
-        companyReceivedDiv.classList.remove('active');
-        companyDetailsDiv.classList.remove('hidden');
-        totalBlDiv.classList.remove('hidden');
-        proceedBtn.style.display = 'block';
-})
-document.getElementById('next-button').addEventListener('click',()=>{
-    modals.classList.add('active');    
 })
 
 modals.addEventListener('click', (e)=>{
