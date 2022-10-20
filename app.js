@@ -10,6 +10,8 @@ secondCompanyName = document.querySelector('#second-company-name'),
 
 firstCompanyConvertedName = document.querySelectorAll('.first-company'),
 secondCompanyConvertedName = document.querySelectorAll('.second-company'),
+modals = document.querySelector('.modals'),
+crossBtn = document.querySelector('.cross-button span')
 proceedBtn = document.querySelector('.proceed-button button');
 
 proceedBtn.addEventListener('click',()=>{
@@ -31,3 +33,13 @@ document.getElementById('back-button').addEventListener('click',()=>{
         totalBlDiv.classList.remove('hidden');
         proceedBtn.style.display = 'block';
 })
+document.getElementById('next-button').addEventListener('click',()=>{
+    modals.classList.add('active');    
+})
+
+modals.addEventListener('click', (e)=>{
+    if(e.target.className == 'fa-solid fa-xmark'){
+        modals.classList.remove('active');   
+    }    
+})
+
