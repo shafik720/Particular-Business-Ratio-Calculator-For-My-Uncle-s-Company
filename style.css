@@ -68,3 +68,25 @@ body{
 .company-received.active{
     display: flex;
 }
+
+
+/*-------------------------------- Second section button -------------------------*/
+.second-section-button{
+    margin: 25px 0;   
+    padding: 0; 
+}
+.second-section-button button{
+    width: 100%;
+    outline: none;
+    background: #007ACC;
+    height: 50px;
+    color: white;
+    font-size: 22px;
+    font-weight: 500;
+    border-radius: 5px;
+    margin: 15px 0;
+    border: none;
+}
+#back-button{
+    background: darkred;
+}

@@ -17,9 +17,17 @@ proceedBtn.addEventListener('click',()=>{
         companyReceivedDiv.classList.add('active');
         companyDetailsDiv.classList.add('hidden');
         totalBlDiv.classList.add('hidden');
+        proceedBtn.style.display = 'none';
         firstCompanyConvertedName.forEach(index=>index.innerText = firstCompanyName.value);
         secondCompanyConvertedName.forEach(index=>index.innerText = secondCompanyName.value);
     }else{
         alert('Fill up all field')
     }
+})
+
+document.getElementById('back-button').addEventListener('click',()=>{
+        companyReceivedDiv.classList.remove('active');
+        companyDetailsDiv.classList.remove('hidden');
+        totalBlDiv.classList.remove('hidden');
+        proceedBtn.style.display = 'block';
 })
