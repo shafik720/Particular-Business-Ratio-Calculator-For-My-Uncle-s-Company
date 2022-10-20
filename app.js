@@ -8,6 +8,9 @@ firstCompanyBL = document.querySelector('#first-company-bl'),
 secondCompanyBL = document.querySelector('#second-company-bl'),
 secondCompanyName = document.querySelector('#second-company-name'),
 
+firstCompanyReceived = document.getElementById('first-company-received'),
+secondCompanyReceived = document.getElementById('second-company-received'),
+
 firstCompanyConvertedName = document.querySelectorAll('.first-company'),
 secondCompanyConvertedName = document.querySelectorAll('.second-company'),
 modals = document.querySelector('.modals'),
@@ -20,7 +23,17 @@ proceedBtn.addEventListener('click',()=>{
         firstCompanyConvertedName.forEach(index=>index.innerText = firstCompanyName.value);
         secondCompanyConvertedName.forEach(index=>index.innerText = secondCompanyName.value);
     }else{
-        alert('Fill up all field')
+        // alert('Fill up all field');
+        modals.classList.add('active'); 
+
+
+        //--------------------------------- Calculation starts here 
+        let totalBl = parseInt(blInput.value),
+        totalReceived = parseInt(firstCompanyReceived.value) + parseInt(secondCompanyReceived.value)
+        ;
+
+
+        document.querySelector('.received-ton').innerText = totalReceived;
     }
 })
 
@@ -29,4 +42,7 @@ modals.addEventListener('click', (e)=>{
         modals.classList.remove('active');   
     }    
 })
+
+
+
 
