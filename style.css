@@ -20,6 +20,9 @@ body{
     font-size: 26px ;
     font-weight: 600;
 }
+.total-bl.hidden{
+    display: none;
+}
 
 /* first company */
 .first-company-name, .second-company-name, .first-company-received, .Second-company-received{
@@ -50,7 +53,12 @@ body{
 .company-details.hidden{
     display: none;
 }
-
+.first-company{
+    color: orangered;
+}
+.second-company{
+    color: blue;
+}
 
 
 /*-------------------------------- Company-received section  -------------------------*/
