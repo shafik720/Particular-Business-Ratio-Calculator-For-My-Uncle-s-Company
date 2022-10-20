@@ -24,6 +24,7 @@ body{
     display: none;
 }
 
+
 /* first company */
 .first-company-name, .second-company-name, .first-company-received, .Second-company-received{
     border: 3px solid #007ACC;
@@ -32,6 +33,7 @@ body{
     margin: 15px 0;
     font-weight: 600;
     font-size: 18px;
+    box-shadow: 0 10px 10px rgba(0,0,0,0.3);
 }
 .second-company-name, .Second-company-received{
     border: 3px solid darkred;
@@ -64,6 +66,7 @@ body{
 /*-------------------------------- Company-received section  -------------------------*/
 .company-received{
     display: none;
+    margin-top: 100px;
 }
 .company-received.active{
     display: flex;
