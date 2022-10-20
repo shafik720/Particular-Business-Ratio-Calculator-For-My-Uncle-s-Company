@@ -141,16 +141,21 @@ body{
     border: 3px solid blue;
     width: 80%;
 }
-.first-table{
-    
-}
 
-.first-table table tr{
+
+.table table tr{
     border: 2px solid grey;
 }
-.first-table table tr td{
+.table table tr td{
     border: 2px solid grey;
     padding: 15px;
     font-size: 18px;
     font-weight: 600;
+}
+
+.second-table{
+    margin-top: 20px;
+}
+.table>:not(:first-child) {
+    border-top: none;
 }
