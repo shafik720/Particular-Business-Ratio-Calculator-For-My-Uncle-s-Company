@@ -28,8 +28,26 @@ proceedBtn.addEventListener('click',()=>{
 
 
         //--------------------------------- Calculation starts here 
-        let totalBl = parseInt(blInput.value),
+        let totalBlTon = parseInt(blInput.value),
+        totalBlBag = totalBlTon * 20,       
         totalReceived = parseInt(firstCompanyReceived.value) + parseInt(secondCompanyReceived.value)
+        excessShort = totalReceived - totalBlBag 
+        // console.log(totalBlBag);
+        // console.log(totalReceived);
+        // console.log(totalBlBag - totalReceived);
+        console.log(excessShort);
+
+        if(excessShort<0){
+            document.querySelector('.blQuantityBag').innerText = totalBlBag;
+            document.querySelector('.shortExcess').innerText = 'Short';
+            document.querySelector('.shortExcess').style.color = 'red'
+            document.querySelector('.short-amount').innerText = excessShort;
+        }else{
+            document.querySelector('.blQuantityBag').innerText = totalBlBag;
+            document.querySelector('.shortExcess').innerText = 'Excess';
+            document.querySelector('.shortExcess').style.color = 'green'
+            document.querySelector('.short-amount').innerText = excessShort;
+        }
         ;
 
 
