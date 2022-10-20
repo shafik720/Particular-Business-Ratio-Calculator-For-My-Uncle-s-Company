@@ -45,3 +45,18 @@ body{
     margin: 30px 0;
     border: none;    
 }
+
+/*-------------------------------- Company details section  -------------------------*/
+.company-details.hidden{
+    display: none;
+}
+
+
+
+/*-------------------------------- Company-received section  -------------------------*/
+.company-received{
+    display: none;
+}
+.company-received.active{
+    display: flex;
+}
